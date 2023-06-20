@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea Villamizar</title>
+    <link rel="stylesheet" href="css/contacto.css">
+    <script src="https://kit.fontawesome.com/d0e6e2088b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="img/eidos.png" alt="logo" class="logo">
+        <nav>
+            <ul class="navLinks">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+<section class="contact">
+    <div class="u-wrapper">
+        <div class="contact-content">
+
+            <form id="form" action="" class="form">
+                <h3 class="tag"><span>Contactame</span></h3>
+                <label for="name">Nombre Completo <span>*</span></label>
+                <input name="name" required type="text" id="name" placeholder="Tu nombre">
+                <label for="email">Correo electrónico <span>*</span></label>
+                <input name="email" type="text" id="email" required
+                    placeholder=" tu direccion de correo@gmail.com">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+                <button type="submit" class="btn primary full">enviar mensaje</button>
+            </form>
+            <a href="mailto:oneloveholic@gmail.com" id="correo"></a>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+
+    <div class="footercontainer">
+        <div class="social-item">
+            <a href="oneloveholic@gmail.com"> <i class="fa-solid fa-envelope"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=%2B541128462892&text="> <i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/catherine99_"> <i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/andrea-villamizar-50804427a/"> <i class="fa-brands fa-linkedin"></i></a>
+        </div>
+
+
+        <p class="footer-copyright">
+            Copyright 2023 - Todos los derechos reservados.
+        </p> 
+</footer>
+<script>
+    const $form = document.querySelector('#form')
+    const $buttonMailto = document.querySelector('#trucazo')
+
+    $form.addEventListener('submit', handleSubmit)
+
+    function handleSubmit(event) {
+        event.preventDefault()
+        const form = new FormData(this)
+        $buttonMailto.setAttribute('href', `mailto:oneloveholic@gmail.com?subject=nombre ${form.get('name')}  correo ${form.get('email')}&body=${form.get('message')}`)
+        $buttonMailto.click()
+    }
+</script>
+</body>
+
