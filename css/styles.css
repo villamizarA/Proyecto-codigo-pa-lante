@@ -4,6 +4,22 @@
   --gradient: linear-gradient(135deg, #5cdcf3 0%, #e6afe3 100%);
   --black: black;
 }
+.hamburger {
+  display: none; /* Ocultar el botón en dispositivos grandes */
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin-bottom: 5px;
+}
+
+.show {
+  display: block !important;
+}
 
 #navbar {
   background-color: #5cdcf3;
@@ -150,7 +166,7 @@ section {
 
 /* queris móviles */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 320px) {
   .logo {
     width: 120px;
     margin-left: 10px;
@@ -185,6 +201,7 @@ section {
     margin: 10px 0;
   }
 }
+
 
 /* media para desktop y portátiles */
 
