@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrea Villamizar</title>
-    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/d0e6e2088b.js" crossorigin="anonymous"></script>
 
 </head>
@@ -14,11 +14,13 @@
 <body>
 
     <header>
-        <img class="logo" src="img/eidos.png" alt="logo" class="logo">
-        <nav>
-            <ul class="navLinks">
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+        <img class="logo" src="./img/eidos.png" alt="Logo">
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
+                <li class="nav-links"><a href="./index.html">Inicio</a></li>
+                <li class="nav-links"><a href="./contacto.html" class="active">Contacto</a></li>
             </ul>
         </nav>
 
